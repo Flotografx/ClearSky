@@ -24,7 +24,7 @@ public abstract class MixinFogRenderer {
         final ClientLevel world = mc.level;
         if (world == null) return val;
         if (world.dimensionType().hasSkyLight()) {
-            return world.getSkyColor(mc.gameRenderer.getMainCamera().getPosition(), mc.getFrameTime());
+            return world.getSkyColor(mc.gameRenderer.getMainCamera().getPosition(), mc.getFrameTimeNs());
         } else {
             return val;
         }
